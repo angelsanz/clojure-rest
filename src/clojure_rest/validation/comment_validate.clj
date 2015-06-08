@@ -32,6 +32,12 @@
   (v/check-field params :eventsid #(not (ev/event-exists? %))))
 
 
+;; {} -> [{}?, Error?]
+;; Error if ({} :commentsid) does not exist
+(defn check-comment-not-exists [params]
+  (v/check-field params :commentsid #(not (comment-exists? %))))
+
+
 ;; {} -> {}
 ;; Transforms the author from username to uuid
 (defn username->uuid [params]

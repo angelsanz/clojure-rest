@@ -12,6 +12,11 @@
   (v/field-exists-in-table? "events" "eventsid" id))
 
 
+;; {} -> [{}?, Error?]
+(defn check-event-not-exists [params]
+  (v/check-field params :events #(not (event-exists? %))))
+
+
 ;; String -> Either<{}|nil>
 (defn get-event-table [id]
   (v/get-table-values "events" "eventsid" id))

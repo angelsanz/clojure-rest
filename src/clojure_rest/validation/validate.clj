@@ -31,8 +31,9 @@
                ((keyword row))))))
 
 
-;; {} key fn -> Boolean
-;; Check (fn {{} :key})
+;; {} key pred -> [{}?, Error?]
+;; If (pred ({} :key) -> [nil Error]
+;; Otherwise [{} nil]
 (defn check-field [params field pred]
   (if (pred (params field))
     [nil err-bad-request]

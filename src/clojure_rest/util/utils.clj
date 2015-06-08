@@ -62,6 +62,12 @@
 (defn parse-float [s]
   (Float/parseFloat s))
 
+
+;; String -> Boolean
+(defn is-uuid [u]
+  (= u
+     (re-find #"[a-z0-9]{8}\-[a-z0-9]{4}\-[a-z0-9]{4}\-[a-z0-9]{4}\-[a-z0-9]{12}" u)))
+
 ;; ---------------------------------------------------------------------
 ;; Exponential backoff solution
 ;; Credits go to Eric Normand @ LispCast
