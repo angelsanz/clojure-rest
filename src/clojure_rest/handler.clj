@@ -10,6 +10,7 @@
             [clojure-rest.routes.auth-routes :refer [auth-routes]]
             [clojure-rest.routes.user-routes :refer [user-routes]]
             [clojure-rest.routes.event-routes :refer [event-routes]]
+            [clojure-rest.routes.report-routes :refer [report-routes]]
             [clojure-rest.routes.comment-routes :refer [comment-routes]]
             [clojure-rest.routes.coordinate-routes :refer [coordinate-routes]]))
 
@@ -37,6 +38,8 @@
            
            (context "/events" [] event-routes)
            
+           (context "/reports" [] report-routes)
+
            (context "/comments" [] comment-routes)
            
            (context "/coordinates" [] coordinate-routes)
