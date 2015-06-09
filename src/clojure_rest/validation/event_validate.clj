@@ -14,7 +14,7 @@
 
 ;; {} -> [{}?, Error?]
 (defn check-event-not-exists [params]
-  (v/check-field params :events #(not (event-exists? %))))
+  (v/check-field params :eventsid #(not (event-exists? %))))
 
 
 ;; String -> Either<{}|nil>
