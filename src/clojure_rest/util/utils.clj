@@ -49,7 +49,7 @@
 (defn trim-inside [word]
   (->> word
        (#(clojure.string/split % #" "))
-       (filter #(not (clojure.string/blank? %)))
+       (filter (complement clojure.string/blank?))
        (clojure.string/join " ")))
 
 

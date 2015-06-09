@@ -34,7 +34,7 @@
 ;; {} -> [{}?, Error?]
 ;; Check for {{} :username}, return error if username doesn't exist
 (defn- check-username-not-exists [params]
-  (v/check-field params :username #(not (user-exists? %))))
+  (v/check-field params :username (complement user-exists?)))
 
 ;; {} -> [{}?, Error?]
 ;; Check for {{} :email}

@@ -12,7 +12,7 @@
 ;; {} -> [{}?, Error?]
 ;; Check for {{} :author}
 (defn- check-author [params]
-  (v/check-field params :author #(not (uv/user-exists? %))))
+  (v/check-field params :author (complement uv/user-exists?)))
 
 
 ;; UUID -> Boolean
@@ -23,19 +23,19 @@
 ;; {} -> [{}?, Error?]
 ;; Checks for [{} :parent]
 (defn- check-parent [params]
-  (v/check-field params :parent #(not (comment-exists? %))))
+  (v/check-field params :parent (complement comment-exists?)))
 
 
 ;; {} -> [{}?, Error?]
 ;; Checks for {:eventsid}
 (defn- check-event [params]
-  (v/check-field params :eventsid #(not (ev/event-exists? %))))
+  (v/check-field params :eventsid (complement ev/event-exists?)))
 
 
 ;; {} -> [{}?, Error?]
 ;; Error if ({} :commentsid) does not exist
 (defn check-comment-not-exists [params]
-  (v/check-field params :commentsid #(not (comment-exists? %))))
+  (v/check-field params :commentsid (complement comment-exists?)))
 
 
 ;; {} -> {}

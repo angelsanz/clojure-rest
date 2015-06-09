@@ -14,7 +14,7 @@
 
 ;; {} -> [{}?, Error?]
 (defn check-event-not-exists [params]
-  (v/check-field params :eventsid #(not (event-exists? %))))
+  (v/check-field params :eventsid (complement event-exists?)))
 
 
 ;; String -> Either<{}|nil>
@@ -25,7 +25,7 @@
 ;; {} -> [{}?, Error?]
 ;; Check for {{} :author}
 (defn- check-author [params]
-  (v/check-field params :author #(not (uv/user-exists? %))))
+  (v/check-field params :author (complement uv/user-exists?)))
 
 
 ;; {} -> {}

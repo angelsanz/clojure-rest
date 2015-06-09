@@ -1,80 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title>SaleOkase - Cola de Moderación</title>
-    <link id="estilo" rel="stylesheet" type="text/css" href="./styles/extra-pages-style.css">
-    <script type="text/javascript">   
-      function eliminar(elemento)
-      {
-        var id=elemento.parentNode.getAttribute("id");
-        node=document.getElementById(id);
-        node.parentNode.removeChild(node);
-      }
-    </script>
-  </head>
-  <body>
-    <div id="cabecera">
-      <a href="/"><img src="./img/assets/logo.png" alt="Logo"></a>
-      <h1>COLA DE MODERACIÓN</h1>
-    </div>
-    
-    <div id="cuerpo">
-      <div id="reporte-1">
-        <fieldset class="r">
-          <legend>Reporte1:</legend>
-          <label><h4>Título:<br/></h4></label>
-          <p class="titulo">Insultos</p>
-          <label><h4>Mensaje:<br/></h4></label>
-          <p class="mensaje">Pepito está faltando al respeto a los miembros inscritos en el evento</p>
-        </fieldset>
-        <button class="moderation-button aceptar" type="button" onclick='eliminar(this)'>Aceptar</button>
-        <button class="moderation-button rechazar" type="button" onclick='eliminar(this)'>Rechazar</button>
-      </div>						
-      <div id="reporte-2">
-        <fieldset class="r">
-          <legend>Reporte2:</legend>
-          <label><h4>Título:<br/></h4></label>
-          <p class="titulo">Cambiar color</p>
-          <label><h4>Mensaje:<br/></h4></label>
-          <p class="mensaje">No me gusta el color de la página</p>
-        </fieldset>
-        <button class="moderation-button aceptar" type="button" onclick='eliminar(this)'>Aceptar</button>
-        <button class="moderation-button rechazar" type="button" onclick='eliminar(this)'>Rechazar</button>
-      </div>
-      <div id="reporte-3">
-        <fieldset class="r">
-          <legend>Reporte3:</legend>
-          <label><h4>Título:<br/></h4></label>
-          <p class="titulo">Fallo en evento</p>
-          <label><h4>Mensaje:<br/></h4></label>
-          <p class="mensaje">Hay un error en la fecha de un evento.</p>
-        </fieldset>
-        <button class="moderation-button aceptar" type="button" onclick='eliminar(this)'>Aceptar</button>
-        <button class="moderation-button rechazar" type="button" onclick='eliminar(this)'>Rechazar</button>
-      </div>
-      <div id="reporte-4">
-        <fieldset class="r">
-          <legend>Reporte4:</legend>
-          <label><h4>Título:<br/></h4></label>
-          <p class="titulo">Usuario spam</p>
-          <label><h4>Mensaje:<br/></h4></label>
-          <p class="mensaje">Un usuario se dedica a mandar invitaciones de eventos siempre.</p>
-        </fieldset>
-        <button class="moderation-button aceptar" type="button" onclick='eliminar(this)'>Aceptar</button>
-        <button class="moderation-button rechazar" type="button" onclick='eliminar(this)'>Rechazar</button>
-      </div>
-      <div id="reporte-5">
-        <fieldset class="r">
-          <legend>Reporte5:</legend>
-          <label><h4>Título:<br/></h4></label>
-          <p class="titulo">Modificar</p>
-          <label><h4>Mensaje:<br/></h4></label>
-          <p class="mensaje">Quiero que se modifique un eror en mi cuenta.</p>
-        </fieldset>
-        <button class="moderation-button aceptar" type="button" onclick='eliminar(this)'>Aceptar</button>
-        <button class="moderation-button rechazar" type="button" onclick='eliminar(this)'>Rechazar</button>
-      </div>
-    </div>
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>SaleOkase - Cola de Moderación</title>
+		<link id="estilo" rel="stylesheet" type="text/css" href="./styles/extra-pages-style.css">
+		<script type="text/javascript">
+			function eliminar(elemento)
+			{
+				var id=elemento.parentNode.getAttribute("id");
+				node=document.getElementById(id);
+				node.parentNode.removeChild(node);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="cabecera">
+			<a href="/"><img src="./img/assets/logo.png" alt="Logo"></a>
+			<h1>COLA DE MODERACIÓN</h1>
+		</div>
+
+		<div id="cuerpo">
+			<div id="reporte-1">
+				<fieldset class="r">
+					<legend>Reporte1:</legend>
+					<label><h4>Título:<br/></h4></label>
+					<p class="titulo">Insultos</p>
+					<label><h4>Mensaje:<br/></h4></label>
+					<p class="mensaje">Pepito está faltando al respeto a los miembros inscritos en el evento</p>
+				</fieldset>
+				<button class="moderation-button aceptar" type="button" onclick='eliminar(this)'>Aceptar</button>
+				<button class="moderation-button rechazar" type="button" onclick='eliminar(this)'>Rechazar</button>
+			</div>
+			<div id="reporte-2">
+				<fieldset class="r">
+					<legend>Reporte2:</legend>
+					<label><h4>Título:<br/></h4></label>
+					<p class="titulo">Cambiar color</p>
+					<label><h4>Mensaje:<br/></h4></label>
+					<p class="mensaje">No me gusta el color de la página</p>
+				</fieldset>
+				<button class="moderation-button aceptar" type="button" onclick='eliminar(this)'>Aceptar</button>
+				<button class="moderation-button rechazar" type="button" onclick='eliminar(this)'>Rechazar</button>
+			</div>
+			<div id="reporte-3">
+				<fieldset class="r">
+					<legend>Reporte3:</legend>
+					<label><h4>Título:<br/></h4></label>
+					<p class="titulo">Fallo en evento</p>
+					<label><h4>Mensaje:<br/></h4></label>
+					<p class="mensaje">Hay un error en la fecha de un evento.</p>
+				</fieldset>
+				<button class="moderation-button aceptar" type="button" onclick='eliminar(this)'>Aceptar</button>
+				<button class="moderation-button rechazar" type="button" onclick='eliminar(this)'>Rechazar</button>
+			</div>
+			<div id="reporte-4">
+				<fieldset class="r">
+					<legend>Reporte4:</legend>
+					<label><h4>Título:<br/></h4></label>
+					<p class="titulo">Usuario spam</p>
+					<label><h4>Mensaje:<br/></h4></label>
+					<p class="mensaje">Un usuario se dedica a mandar invitaciones de eventos siempre.</p>
+				</fieldset>
+				<button class="moderation-button aceptar" type="button" onclick='eliminar(this)'>Aceptar</button>
+				<button class="moderation-button rechazar" type="button" onclick='eliminar(this)'>Rechazar</button>
+			</div>
+			<div id="reporte-5">
+				<fieldset class="r">
+					<legend>Reporte5:</legend>
+					<label><h4>Título:<br/></h4></label>
+					<p class="titulo">Modificar</p>
+					<label><h4>Mensaje:<br/></h4></label>
+					<p class="mensaje">Quiero que se modifique un eror en mi cuenta.</p>
+				</fieldset>
+				<button class="moderation-button aceptar" type="button" onclick='eliminar(this)'>Aceptar</button>
+				<button class="moderation-button rechazar" type="button" onclick='eliminar(this)'>Rechazar</button>
+			</div>
+		</div>
+	</body>
 </html>
