@@ -3,7 +3,7 @@
             [ring.mock.request :as mock]
             [clojure-rest.handler :refer :all]
             [clojure-rest.data.comments :refer [create-new-comment]]
-            [clojure-rest.util.utils :refer [is-uuid]]
+            [clojure-rest.util.utils :refer [uuid?]]
             [cheshire.core :refer [parse-string
                                    generate-string]]))
 
@@ -44,7 +44,7 @@
                                                               :token token}))
                               (mock/content-type "application/json")))]
         (is (= (:status response) 200))
-        (is (true? (is-uuid (:body response))))))
+        (is (true? (uuid? (:body response))))))
     
     ;; Creating an event report should return the uuid of the report
     (testing "Creating an event report"
@@ -54,4 +54,4 @@
                                                               :token token}))
                               (mock/content-type "application/json")))]
         (is (= (:status response) 200))
-        (is (true? (is-uuid (:body response))))))))
+        (is (true? (uuid? (:body response))))))))
