@@ -152,13 +152,20 @@
        h/wrap-response))
 
 
-;; {"content" :"eventid" "token"} -> Response[:body {}? :status Either<200|401|...>]
+;; {"content" "eventsid" "token"} -> Response[:body {}? :status Either<200|401|...>]
 (defn create-new-event-report [content]
   (->> content
        auth/auth-adapter
        (bind-error #(ev/check-event-not-exists %))
        (bind-error (fn [m] (bind-to (->> m :content sanitize/escape-html (assoc m :content)))))
        bind-event-report-insert
+       h/wrap-response))
+
+
+;; String {"token"} -> Response[:body nil :status Either<204|401|404>
+(defn delete-event-report [id content]
+  (->> content
+       auth/auth-adapter
        h/wrap-response))
 
 ;; () -> Response[:body [{}?] :status 200]

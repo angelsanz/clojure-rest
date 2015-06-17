@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 10pt;
+    font-family: sans-serif;
+    background-color: #F6F9FC;
+}
+
+header {
+    padding: 5px;
+    height: 9vh;
+    min-height: 50px;
+    background-color: #407394;
+    color: #F6F9FC;
+    text-align: center;
+}
+
+header img {
+    max-width: 100%;
+    max-height: 100%;
+    float: left;
+}
+
+header > h1 {
+    padding-top: calc(9vh / 4);
+}
+
+#content > h2 {
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+}
+
+.report-separator {
+    width: 95vw;
+    margin: auto;
+    border-bottom: 2px solid #989D96;
+}
+
+.report {
+    margin: .5rem 1rem .5rem 1rem;
+    border: 1px solid black;
+    padding: 1.5rem;
+}
+
+.report-title {
+    float: left;
+    margin-right: .5rem;
+}
+
+.report-content {
+    width: 65%;
+    margin: auto;
+}
+
+.report-button-pane {
+    float: right;
+}
+
+.report h3 {
+    font-size: 14pt;
+}
+
+.moderation-button {
+    color: #F6F9FC;
+    font-size: 15pt;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+}
+
+.accept {
+    background-color: #7FDE95;
+}
+
+.deny {
+    background-color: #CF6160;
+}
+
