@@ -76,7 +76,7 @@ var map =  (function() {
 	}
 
 	return {
-		initialize: initialize(),
+		initialize: initialize,
 		reload: function() {
 			setupMarkers(mapCanvas)
 		}
